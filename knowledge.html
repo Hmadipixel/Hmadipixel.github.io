@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>المعلومات | العلامات</title>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --primary: #3157d5;
+      --border: #e4e8f0;
+      --shadow: 0 12px 30px rgba(25, 45, 90, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    header {
+      background: linear-gradient(135deg, #12204a, #3157d5);
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    header h1 {
+      margin: 0 0 12px;
+      font-size: 48px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 19px;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 18px;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 17px;
+      margin-bottom: 28px;
+      outline: none;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #101a35;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 40px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 760px) {
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a class="brand" href="index.html">📚 العلامات</a>
+
+      <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="summaries.html">ملخصات الكتب</a>
+        <a class="active" href="knowledge.html">المعلومات</a>
+        <a href="nasheeds.html">كلمات الأناشيد</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>🧠 المعلومات</h1>
+
+    <p>
+      معلومات علمية وثقافية ومعارف متنوعة مرتبة بطريقة سهلة وسريعة
+    </p>
+  </header>
+
+  <main>
+
+    <input
+      id="searchInput"
+      class="search-box"
+      type="search"
+      placeholder="ابحث عن معلومة..."
+      oninput="searchCards()"
+    >
+
+    <div class="cards">
+
+      <article class="card searchable">
+        <h2>🔬 العلوم</h2>
+        <p>
+          معلومات مبسطة عن الطبيعة والإنسان والتجارب والظواهر العلمية
+        </p>
+        <a href="#">عرض المحتوى قريبًا ←</a>
+      </article>
+
+      <article class="card searchable">
+        <h2>🏺 التاريخ</h2>
+        <p>
+          معلومات مختصرة عن الحضارات والأحداث والشخصيات التاريخية
+        </p>
+        <a href="#">عرض المحتوى قريبًا ←</a>
+      </article>
+
+      <article class="card searchable">
+        <h2>💻 التقنية</h2>
+        <p>
+          معلومات عن التكنولوجيا والذكاء الاصطناعي والأدوات الرقمية
+        </p>
+        <a href="#">عرض المحتوى قريبًا ←</a>
+      </article>
+
+      <article class="card searchable">
+        <h2>🌍 معلومات عامة</h2>
+        <p>
+          معلومات متنوعة ومفيدة تساعد على زيادة المعرفة العامة
+        </p>
+        <a href="#">عرض المحتوى قريبًا ←</a>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 العلامات — جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    function searchCards() {
+      const searchText =
+        document.getElementById("searchInput").value.toLowerCase();
+
+      document.querySelectorAll(".searchable").forEach(function(card) {
+        const content = card.textContent.toLowerCase();
+
+        card.classList.toggle(
+          "hidden",
+          !content.includes(searchText)
+        );
+      });
+    }
+  </script>
+
+</body>
+</html>
