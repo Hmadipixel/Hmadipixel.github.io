@@ -1,0 +1,51 @@
+site_name: مكتبتي الرقمية
+site_description: مكتبة للأعمال والملخصات والمعرفة المفيدة
+site_url: https://hmadipixel.github.io/
+
+theme:
+  name: material
+  language: ar
+  direction: rtl
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: الوضع الليلي
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: الوضع النهاري
+
+plugins:
+  - search:
+      lang:
+        - ar
+        - en
+
+nav:
+  - الرئيسية: index.md
+
+  - الملخصات:
+      - نظرة عامة: summaries/index.md
+      - ملخصات الكتب: summaries/books.md
+      - ملخصات الدورات: summaries/courses.md
+
+  - الأعمال:
+      - جميع الأعمال: projects/index.md
+      - المشاريع المكتملة: projects/completed.md
+
+  - المعرفة:
+      - قاعدة المعرفة: knowledge/index.md
+      - المقالات والأفكار: knowledge/articles.md
+
+  - عن الموقع: about.md
